@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mappers.AddressMapper">
+
+	<resultMap type="Address" id="AddressResult">
+		<result property="id" column="id"/>
+		<result property="sheng" column="sheng"/>
+		<result property="shi" column="shi"/>
+		<result property="qu" column="qu"/>
+	</resultMap>
+
+	<!-- 使用mybatis-config.xml取好的别名,parameterType为参数类型，后面的resultType为返回值类型 -->
+	<select id="findById" parameterType="Integer" resultType="Address">
+		select * from t_address where id=#{id}
+	</select>
+</mapper> 

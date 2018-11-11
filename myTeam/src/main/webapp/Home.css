@@ -1,0 +1,238 @@
+@charset "UTF-8";
+*{
+				padding: 0;
+				margin: 0;
+			}
+			#main{
+				height:380px;
+				width:100%;
+				overflow: hidden;	
+	        } 
+	        .slogen{
+	        	font-size: 30px;
+	        	font-family: "微软雅黑";
+	        	position: absolute;
+	        	text-align: center;
+	        }
+			#headline{
+				width: 1000%;
+				height: 380px;
+				position: relative;	
+			}
+			#headline ul{
+				width: 100%;
+				height: 450px;
+			}
+			#headline ul li{
+				width:10%;   
+				height: 480px;
+				float: left;
+			}
+			#headline ul li{
+				-webkit-box-shadow: inset 0px 100px 150px grey;
+			}
+			.navbar{
+				margin: 0px;
+			    border-top:2px solid;
+				border-color:#D6E9C6;
+				padding-left:400px; 
+			}
+			.navbar-header .navbar-brand{
+				color: lightslategray;
+			}
+			.navbar-inverse  .navbar-nav li a {
+				color: rgb(107, 78, 59);
+				font-family: "微软雅黑";
+				font-size: 15px;
+				font-weight: bolder;
+			}
+			.navbar-inverse  .navbar-nav li a:hover{
+				color: #D6E9C6;
+				border-radius: 0px 0 25px 25px;
+			}
+			.navbar-inverse .navbar-brand,.navbar-inverse .navbar-brand:hover{
+				background-color: rgb(66, 40, 25);
+				border-radius: 0px 0 25px 25px;
+			}
+			
+			.denglu{
+				color: rgb(107, 78, 59);
+				font-family: "微软雅黑";
+				font-size: 15px;
+				font-weight: bolder;
+				float: right;
+				position: absolute;
+
+			}
+			
+			#brief{
+				height:350px;
+				width:100%;
+				
+			}
+			.biaoyu{
+				font-family: "楷体";
+				font-size: 35px;
+				text-align: center;
+				margin-top:-130px;
+				margin-left: 35px;
+				position: absolute;
+			/*	z-index: 110;*/
+				
+			}
+			.classification{
+				width: 24%;
+				margin-left: 0.8%;
+				float: left;
+				position: relative;
+			}
+			.classification img{
+				width: 100%;
+				/*z-index: 100;*/
+			}
+			
+			#container{
+				height:380px;	
+			}
+			.items {
+				height: 250px;
+				/*border: 1px solid red;*/
+				border-left: 1px solid gainsboro;
+				border-right: 1px solid gainsboro;
+				border-bottom: 1px solid gainsboro;
+			}
+			
+			.itemsTop {
+				height: 170px;
+				width: 180px;
+				/*border: 1px solid yellow;*/
+				
+				margin: 10px auto;
+				margin-top: 30px;
+				padding-top: 30px;
+			}
+			
+			.itemsBottom {
+				height: 100px;
+				width: 100%;
+				/*border: 1px solid green;*/
+				margin: 10px auto;
+			}
+			
+			.name {
+				display: block;
+				font-size: 20px;
+				text-align: center;
+				font-family: arial;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			a:hover{
+				text-decoration: none;
+				color: red;
+			}
+		
+			.title{
+				height: 60px;
+				/*border: 1px solid green;*/
+				/*background-color: #428BCA;*/
+				line-height: 60px;
+				font-size: 23px;
+				font-weight: 1000;
+				padding-left: 50px;
+				color: black;
+			}
+			
+			.gengduo{
+				font-size: 15px;
+				color: black;}
+			
+			#nature{
+				background-color: lightgreen;
+			}
+			#kexue{
+				background-color:lightpink;
+			}
+			#code{
+				background-color:lightblue;
+			}
+
+			.login-form-mask {
+				z-index: 9998;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #000;
+				opacity: 0.4;
+				filter: alpha(opacity=40);
+				display: none
+			}
+			.login-form {
+				z-index: 9999;
+				position: fixed;
+				top: 40%;
+				left: 55%;
+				width: 500px;
+				height: 300px;
+				margin: -180px 0 0 -330px;
+				border-radius: 5px;
+				border: solid 2px #666;
+				background-color: #fff;
+				display: none;
+				box-shadow: 0 0 10px #666;
+			}
+			.login-close {
+				margin-right: 15px;
+			}
+
+			#myInput {
+			    background-image: url('https://static.runoob.com/images/mix/searchicon.png'); /* 搜索按钮 */
+			    background-position:1px 5px; /* 定位搜索按钮 */
+			    background-repeat: no-repeat; /* 不重复图片*/
+			    width:300px; 
+			    font-size: 13px; /* 加大字体 */
+			   	padding: 6px 12px 6px 20px;
+			    /*padding: 12px 20px 12px 40px; */
+			    border: 1px solid #ddd; 
+			    float: right;
+			    margin: 10px 10px 8px;
+			}
+			
+			#chakan{
+				float:right;
+				margin-top: 20px;
+				margin-right:585px;
+			}
+			.signup-form-mask{
+				z-index: 9998;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #000;
+				opacity: 0.4;
+				filter: alpha(opacity=40);
+				display: none
+			}
+			.signup-form {
+				z-index: 9999;
+				position: fixed;
+				top: 40%;
+				left: 55%;
+				width: 500px;
+				height: 300px;
+				margin: -180px 0 0 -330px;
+				border-radius: 5px;
+				border: solid 2px #666;
+				background-color: #fff;
+				display: none;
+				box-shadow: 0 0 10px #666;
+			}
+			.signup-close {
+				margin-right: 15px;
+			}

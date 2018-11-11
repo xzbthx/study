@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<classPathEntry location="C:\Maven\apache-maven-3.5.3\mvn-repo\mysql\mysql-connector-java\5.1.12" />
+	
+	<context id="context1" defaultModelType="flat"
+		targetRuntime="MyBatis3">
+
+		<!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表； 一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖 -->
+		<property name="autoDelimitKeywords" value="false" />
+		<!-- 生成的Java文件的编码 -->
+		<property name="javaFileEncoding" value="UTF-8" />
+		<!-- 格式化java代码 -->
+		<property name="javaFormatter"
+			value="org.mybatis.generator.api.dom.DefaultJavaFormatter" />
+		<!-- 格式化XML代码 -->
+		<property name="xmlFormatter"
+			value="org.mybatis.generator.api.dom.DefaultXmlFormatter" />
+
+		<!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号 -->
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+
+		<!-- jdbc连接 -->
+		<jdbcConnection connectionURL="jdbc:mysql://127.0.0.1:3306/myteam"
+			driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+
+		<!-- 类型转换 -->
+		<javaTypeResolver
+			type="org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl">
+			<!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 生成实体类地址 -->
+		<javaModelGenerator targetPackage="com.example.entity"
+			targetProject="myTeam">
+			<property name="enableSubPackages" value="true" />
+			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+
+		<!-- 生成接口dao和SqlProvider类 -->
+		<javaClientGenerator targetPackage="com.example.mapper"
+			targetProject="myTeam" type="ANNOTATEDMAPPER">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+	
+		
+		<table tableName="module" domainObjectName="ModuleInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="M_ID" property="M_ID" />
+			<columnOverride column="M_name" property="M_name" />
+		</table>
+		
+		<table tableName="courses" domainObjectName="CoursesInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="CO_ID" property="CO_ID" />
+			<columnOverride column="M_ID" property="M_ID" />
+			<columnOverride column="CO_name" property="CO_name" />
+			<columnOverride column="CO_introduction" property="CO_introduction" />
+		</table>
+		
+		<table tableName="adjustment" domainObjectName="AdjustmentInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="AD_ID" property="AD_ID" />
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="STU_ID" property="STU_ID" />
+			<columnOverride column="AD_time" property="AD_time" />
+			<columnOverride column="AD_introduction" property="AD_introduction" />
+		</table>
+		
+		<table tableName="administrator" domainObjectName="AdministratorInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="username" property="username" />
+			<columnOverride column="passwords" property="passwords" />
+			<columnOverride column="A_struts" property="A_struts" />
+		</table>
+		
+		<table tableName="allclass" domainObjectName="AllclassInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="CL_ID" property="CL_ID" />
+			<columnOverride column="CO_ID" property="CO_ID" />
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="CL_name" property="CL_name" />
+			<columnOverride column="CL_capacity" property="CL_capacity" />
+			<columnOverride column="CL_number" property="CL_number" />
+			<columnOverride column="CL_price" property="CL_price" />
+			<columnOverride column="CL_startTime" property="CL_startTime" />
+			<columnOverride column="CL_endTime" property="CL_endTime" />
+		</table>
+		
+		<table tableName="comments" domainObjectName="CommentsInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="COM_ID" property="COM_ID" />
+			<columnOverride column="L_ID" property="L_ID" />
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="COM_information" property="COM_information" />
+			<columnOverride column="COM_time" property="COM_time" />
+		</table>
+		
+		<table tableName="homeworktest" domainObjectName="HomeworktestInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="HT_ID" property="HT_ID" />
+			<columnOverride column="L_ID" property="L_ID" />
+			<columnOverride column="HT_form" property="HT_form" />
+			<columnOverride column="HT_introduction" property="HT_introduction" />
+			<columnOverride column="HT_startTime" property="HT_startTime" />
+			<columnOverride column="HT_endTime" property="HT_endTime" />
+		</table>
+		
+		<table tableName="lesson" domainObjectName="LessonInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="L_ID" property="L_ID" />
+			<columnOverride column="CL_ID" property="CL_ID" />
+			<columnOverride column="L_name" property="L_name" />
+			<columnOverride column="L_introduction" property="L_introduction" />
+			<columnOverride column="L_startTime" property="L_startTime" />
+			<columnOverride column="L_endTime" property="L_endTime" />
+		</table>
+		
+		<table tableName="orders" domainObjectName="OrdersInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="CL_ID" property="CL_ID" />
+			<columnOverride column="O_Time" property="O_Time" />
+		</table>
+		
+		<table tableName="resources" domainObjectName="ResourcesInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="RE_ID" property="RE_ID" />
+			<columnOverride column="L_ID" property="L_ID" />
+			<columnOverride column="RE_form" property="RE_form" />
+			<columnOverride column="RE_introduction" property="RE_introduction" />
+		</table>
+		
+		<table tableName="sc" domainObjectName="ScInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="STU_ID" property="STU_ID" />
+			<columnOverride column="CL_ID" property="CL_ID" />
+			<columnOverride column="ID" property="ID" />
+		</table>
+		
+		<table tableName="student" domainObjectName="StudentInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="username" property="username" />
+			<columnOverride column="passwords" property="passwords" />
+			<columnOverride column="S_name" property="S_name" />
+			<columnOverride column="S_sex" property="S_sex" />
+			<columnOverride column="S_IDcard" property="S_IDcard" />
+			<columnOverride column="S_introduction" property="S_introduction" />
+			<columnOverride column="S_qq" property="S_qq" />
+			<columnOverride column="S_wei" property="S_wei" />
+			<columnOverride column="S_emile" property="S_emile" />
+			<columnOverride column="S_mobile" property="S_mobile" />
+		</table>
+		
+		<table tableName="teacher" domainObjectName="TeacherInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="username" property="username" />
+			<columnOverride column="passwords" property="passwords" />
+			<columnOverride column="T_name" property="T_name" />
+			<columnOverride column="T_sex" property="T_sex" />
+			<columnOverride column="T_Cnumber" property="T_Cnumber" />
+			<columnOverride column="T_introduction" property="T_introduction" />
+			<columnOverride column="T_IDcard" property="T_IDcard" />
+			<columnOverride column="T_QQ" property="T_QQ" />
+			<columnOverride column="T_wei" property="T_wei" />
+			<columnOverride column="T_emile" property="T_emile" />
+			<columnOverride column="T_mobile" property="T_mobile" />
+		</table>
+		
+		<table tableName="users" domainObjectName="UsersInfo"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample 
+				是否生成 example类 -->
+			<!-- 忽略列，不生成bean 字段 -->
+			<!-- 指定列的java数据类型 -->
+			<columnOverride column="ID" property="ID" />
+			<columnOverride column="username" property="username" />
+			<columnOverride column="passwords" property="passwords" />
+		</table>
+	</context>
+</generatorConfiguration>

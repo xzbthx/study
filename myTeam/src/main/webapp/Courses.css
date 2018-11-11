@@ -1,0 +1,163 @@
+@charset "UTF-8";
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#headline{
+				width: 1000%;
+				height: 380px;
+				position: relative;	
+			}
+			#headline ul{
+				width: 100%;
+				height: 450px;
+			}
+			#headline ul li{
+				width:10%;   
+				height: 480px;
+				float: left;
+			}
+			#headline ul li{
+				-webkit-box-shadow: inset 0px 100px 150px grey;
+			}
+			.navbar{
+				margin: 0px;
+			    border-top:2px solid;
+				border-color:#D6E9C6;
+				padding-left:400px; 
+			}
+			.navbar-header .navbar-brand{
+				color: lightslategray;
+			}
+			.navbar-inverse  .navbar-nav li a {
+				color: rgb(107, 78, 59);
+				font-family: "微软雅黑";
+				font-size: 15px;
+				font-weight: bolder;
+			}
+			.navbar-inverse  .navbar-nav li a:hover{
+				color: #D6E9C6;
+				border-radius: 0px 0 25px 25px;
+			}
+			.navbar-inverse .navbar-brand,.navbar-inverse .navbar-brand:hover{
+				background-color: rgb(66, 40, 25);
+				border-radius: 0px 0 25px 25px;
+			}	
+			
+			#back{
+				height: 450px;
+				width: 100%;
+				background-image: url(img/back1.jpg);
+				display:flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#innerback{
+				height: 400px;
+				width: 90%;
+				background-color:white;	
+			}
+			#tupian{
+				height:280px;
+				width:460px;
+				background-repeat: no-repeat;
+				margin-top:50px;	
+				margin-left: 40px;
+				position: absolute;
+			}
+			.tupian img{
+				height: 280px;
+				width: 100%;			
+			}
+			
+			#buy{
+				height: 250px;
+				display: inline-block;
+				width: 50%;
+				margin-top:50px;
+				float:right;	
+			}
+			.ziti{
+				font-size: 2em;
+				color: #666666;
+				font-family: "微软雅黑";
+			}
+			#ziti{
+				font-size: 2.5em;
+				color: red;
+				font-family: "微软雅黑";
+			}
+			#buy1 input{
+				float:left;
+                width:20%;
+                height:60px;
+                color:white;
+                font-size: 2em;
+               	margin: 15px 20px 0px 0px;
+                background-color:orangered;
+			}
+			
+			#price{
+				height: 70px;
+				width: 600px;
+			/*	background-color:lightgrey;*/
+				margin-top: 10px;
+				line-height: 70px;
+			}
+			
+			#classname{
+				height: 70px;
+				width: 600px;
+			/*	background-color:lightgrey;*/
+				margin-top: 10px;
+				line-height: 70px;
+			}
+			
+			#name{
+				
+			}
+			 #box{
+                height: 400px;
+                width:100%;
+                margin-top: 10px;
+                /*background:lightgoldenrodyellow;*/
+               /* border:1px solid black;*/
+            }
+
+            #head_list input{//div是块级元素，定义为float后在宽度允许的情况下，能在一行内容纳
+                float:left;
+                width:12%;
+                height:40px;
+                color:black;
+                font-size:18px;
+                
+                background-color:lightgreen;
+            }
+            .ziti2{
+	            font-size: 20px;
+	            text-align: center;
+	            font-family: "微软雅黑";
+	            margin-top: 30px;
+            }
+
+            /*.active{//初始及点击后的按钮类
+                color:cornflowerblue;
+            }*/
+       		
+       		.la{
+				width:200px;
+				height:50px;
+				margin: 0 auto; 
+       		}
+          
+			#teaa{
+				width:100%;
+				height:50px;
+			}
+			#tea{
+				border:1px solid gray;
+				font-size: 2em;
+				font-family: "微软雅黑";
+				line-height: 50px;
+				
+			}

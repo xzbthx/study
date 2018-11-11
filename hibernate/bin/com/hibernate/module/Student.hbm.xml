@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+		
+<hibernate-mapping package="com.hibernate.module">
+
+	<class name="Student" table="student">
+	
+		<!-- column是对应数据库生成的表中字段名称，不写的话将和name值相同 -->
+		<!-- 主键的设置,generator标识主键生成方式,native：本地生成策略，依赖数据库特性。 -->
+		<id name="id" column="stuId">
+			<generator class="native"></generator>
+		</id>
+		
+		<properties name="name"></properties>
+		
+	</class>
+
+</hibernate-mapping>
